@@ -1,0 +1,22 @@
+<div class="flex">
+    <h2>Angular Weather App</h2>
+</div>
+
+<div class="flex">
+    <section>
+        <mat-form-field class="">
+            <mat-label>Select City</mat-label>
+            <input matInput placeholder="London" value="" [matAutocomplete]="auto" [formControl]="cityControl">
+        </mat-form-field>
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let item of filteredList | async" [value]="item">
+                {{item}}
+            </mat-option>
+        </mat-autocomplete>
+        <button class="search-btn" mat-raised-button color="primary" (click)="searchOnClick()">Search</button>
+    </section>
+
+    <section>
+        <button mat-raised-button color="warn" (click)="chooseLocationOnClick()">Current Location</button>
+    </section>
+</div>

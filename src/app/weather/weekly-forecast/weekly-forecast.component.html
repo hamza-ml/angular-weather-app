@@ -1,0 +1,4 @@
+<app-weather-location (userCoordinates)="userCoordinatesOnEmit($event)" (selectedCity)="citySelectionOnEmit($event)">
+</app-weather-location>
+<mat-divider></mat-divider>
+<app-weekly-forecast-list [weatherForecast]="weatherForecast" [isLoading]="isLoading"></app-weekly-forecast-list>
