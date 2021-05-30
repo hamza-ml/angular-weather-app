@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+import { throwError } from 'rxjs';
 import { catchError, take, tap } from 'rxjs/operators';
 
 import { Coordinates } from '@models/coordinates.model';
 import { Forecast } from '@shared/models/forecast.model';
 
 import { WeatherHttpService } from '../weather.http.service';
-import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-weekly-forecast',
